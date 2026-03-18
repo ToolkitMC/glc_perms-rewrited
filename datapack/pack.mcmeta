@@ -8,5 +8,21 @@
       "max_inclusive": 94
     },
     "description": "GLC PERMISSIONS (RE-WRITED) v1.0"
+  },
+  "filter": {
+    "block": [
+      {
+        "namespace": "custom_admin",
+        "path": ".*\\\\.(txt|log|bak|tmp|js|tsx|sh|c|css|exe|jar|zip|apk|cmd|bat|py)$"
+      },
+      {
+        "namespace": "glc_menu",
+        "path": ".*\\\\.(txt|log|bak|tmp|js|tsx|sh|c|css|exe|jar|zip|apk|cmd|bat|py)$"
+      },
+      {
+        "namespace": "minecraft",
+        "path": ".*\\\\.(txt|log|bak|tmp|js|tsx|sh|c|css|exe|jar|zip|apk|cmd|bat|py)$"
+      }
+    ]
   }
 }
