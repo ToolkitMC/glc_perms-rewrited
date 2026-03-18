@@ -24,5 +24,12 @@ execute if data storage mc:_ temp.exec{type:"multi_command"} run function custom
 execute if data storage mc:_ temp.exec{type:"multi_function"} run function custom_admin:execute/types/multi_function
 execute if data storage mc:_ temp.exec{type:"multi_action_chain"} run function custom_admin:execute/types/multi_action_chain
 execute if data storage mc:_ temp.exec{type:"kit"} run function custom_admin:execute/types/kit
+execute if data storage mc:_ temp.exec{type:"broadcast"} run function custom_admin:execute/types/broadcast
+execute if data storage mc:_ temp.exec{type:"announce"} run function custom_admin:execute/types/announce
+execute if data storage mc:_ temp.exec{type:"scoreboard"} run function custom_admin:execute/types/scoreboard
+execute if data storage mc:_ temp.exec{type:"team"} run function custom_admin:execute/types/team
+execute if data storage mc:_ temp.exec{type:"random"} run function custom_admin:execute/types/random
+execute if data storage mc:_ temp.exec{type:"repeat"} run function custom_admin:execute/types/repeat
+execute if data storage mc:_ temp.exec{type:"conditional"} run function custom_admin:execute/types/conditional
 function custom_admin:log/add_from_action with storage mc:_ temp
 $tellraw @s ["",{"text":"[GULCE] OK: ","color":"green"},{"text":"$(id)","color":"yellow"}]

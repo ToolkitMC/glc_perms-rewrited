@@ -7,7 +7,7 @@ scoreboard objectives add gulce_sched dummy
 scoreboard players set #flag.player gulce_flags 1
 scoreboard players set #flag.dialog gulce_flags 1
 scoreboard players set #flag.schedule gulce_flags 1
-execute unless data storage mc:handler data run data modify storage mc:handler data set value {actions:[],permissions:[],scheduled:[],kits:[],logs:[]}
+execute unless data storage mc:handler data run data modify storage mc:handler data set value {actions:[],permissions:[],scheduled:[],kits:[],logs:[],bans:[]}
 execute unless data storage mc:_ temp run data modify storage mc:_ temp set value {}
 execute unless data storage mc:ui ui run data modify storage mc:ui ui set value {}
 function custom_admin:handler/version/check

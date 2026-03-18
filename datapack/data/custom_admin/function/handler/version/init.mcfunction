@@ -1,2 +1,2 @@
-data modify storage mc:handler data.meta set value {version:"1.0.1",pack:"GLC PERMISSIONS (RE-WRITED)",author:"ToolkitMC"}
-tellraw @a[tag=gulce_admin] ["",{"text":"[GULCE] ","color":"gold","bold":true},{"text":"İlk kurulum — v1.0.1","color":"green"}]
+data modify storage mc:handler data.meta set value {version:"1.0.2",pack:"GLC PERMISSIONS (RE-WRITED)",author:"ToolkitMC"}
+tellraw @a[tag=gulce_admin] ["",{"text":"[GULCE] ","color":"gold","bold":true},{"text":"İlk kurulum — v1.0.2","color":"green"}]
