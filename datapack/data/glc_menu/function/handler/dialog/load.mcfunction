@@ -1,4 +1,8 @@
+# Storage başlat
+$data modify storage mc:dialog temp.final_ui set value $(dialogData)
+
 # Loading göster
+tag @s add glc.show_pending
 function glc_menu:handler/dialog/loading
 
 # Timer başlat
