@@ -1,4 +1,4 @@
-# GULCE Admin Power
+# GLC PERMISSIONS (RE-WRITED)
 Minecraft Java Edition 1.21.11 admin datapack — plugin gibi çalışır.
 
 ## Özellikler

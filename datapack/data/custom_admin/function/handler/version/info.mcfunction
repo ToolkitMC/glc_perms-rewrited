@@ -1,0 +1,7 @@
+tellraw @s ["",{"text":"╔══════════════════════╗","color":"aqua","bold":true}]
+tellraw @s ["",{"text":"  GLC PERMISSIONS (RE-WRITED)","color":"gold","bold":true}]
+tellraw @s ["",{"text":"  Versiyon: ","color":"gray"},{"storage":"mc:handler","nbt":"data.meta.version","color":"green","bold":true}]
+tellraw @s ["",{"text":"  Paket: ","color":"gray"},{"storage":"mc:handler","nbt":"data.meta.pack","color":"white"}]
+tellraw @s ["",{"text":"  Yazar: ","color":"gray"},{"storage":"mc:handler","nbt":"data.meta.author","color":"aqua"}]
+tellraw @s ["",{"text":"  GitHub: ","color":"gray"},{"text":"ToolkitMC/glc_perms-rewrited","color":"light_purple","underlined":true,"click_event":{"action":"open_url","url":"https://github.com/ToolkitMC/glc_perms-rewrited"}}]
+tellraw @s ["",{"text":"╚══════════════════════╝","color":"aqua","bold":true}]
