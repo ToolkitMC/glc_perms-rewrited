@@ -1,4 +1,5 @@
 scoreboard objectives add gulce_menu trigger
+scoreboard objectives add gulce_menu.cl trigger
 scoreboard objectives add gulce_load.dialog dummy
 scoreboard objectives add gulce_flags dummy
 scoreboard objectives add gulce_sched dummy
@@ -11,4 +12,5 @@ tag @a remove closed.glc
 scoreboard players set @a gulce_load.dialog -1
 scoreboard players set #flag.dialog gulce_flags 1
 scoreboard players enable @a gulce_menu
+scoreboard players enable @a gulce_menu.cl
 tellraw @a[tag=gulce_admin] ["",{"text":"[GLC] Menu sistemi yüklendi","color":"light_purple","bold":true}]
