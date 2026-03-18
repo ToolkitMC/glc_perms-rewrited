@@ -22,7 +22,5 @@ tag @a remove gulce_permitted
 tag @a remove glc.show_pending
 tag @a remove closed.glc
 scoreboard objectives remove gulce_menu.cl
-tag @a remove gulce_banned
-tag @a remove gulce_muted
 tag @a remove glc.close_dialog
 tellraw @a ["",{"text":"[GULCE] ","color":"red","bold":true},{"text":"Datapack kaldırıldı. Şimdi datapacks klasöründen ZIP'i silebilirsiniz.","color":"gray"}]
