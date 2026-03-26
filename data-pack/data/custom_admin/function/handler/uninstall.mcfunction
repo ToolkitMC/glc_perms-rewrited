@@ -10,6 +10,7 @@ scoreboard objectives remove gulce_cooldown
 scoreboard objectives remove gulce_timer
 scoreboard objectives remove gulce_group
 scoreboard objectives remove gulce_perm
+scoreboard objectives remove gulce_rc
 
 # Dinamik gulce_can_* objective'lerini kaldır
 function custom_admin:handler/uninstall/remove_perm_objectives
