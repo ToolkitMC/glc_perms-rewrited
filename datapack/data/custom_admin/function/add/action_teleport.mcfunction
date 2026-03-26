@@ -1,3 +1,0 @@
-# MACRO — {id, x, y, z, player}
-$data modify storage mc:handler data.actions append value {id:"$(id)",type:"teleport",params:{x:"$(x)",y:"$(y)",z:"$(z)"},player:"$(player)"}
-$tellraw @s ["",{"text":"[GULCE] ","color":"gold","bold":true},{"text":"Teleport eylemi eklendi: ","color":"green"},{"text":"$(id)","color":"yellow"}]

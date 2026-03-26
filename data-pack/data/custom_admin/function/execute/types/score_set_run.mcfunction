@@ -1,0 +1,1 @@
+$scoreboard players set $(player) $(objective) $(value)
