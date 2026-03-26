@@ -1,6 +1,6 @@
 # Eylem Çalıştır (MAKRO) — {id:"eylem_id"}
-# CD kontrolü
 
+# CD kontrolü
 execute if score @s gulce_cooldown matches 1.. run tellraw @s ["",{"text":"[GULCE] ","color":"red","bold":true},{"text":"Lütfen bekleyin! Kalan süre: ","color":"red"},{"score":{"name":"@s","objective":"gulce_cooldown"},"color":"yellow"},{"text":" tik","color":"red"}]
 execute if score @s gulce_cooldown matches 1.. run scoreboard players set @s gulce_trigger 0
 execute if score @s gulce_cooldown matches 1.. run return 0
@@ -8,12 +8,20 @@ execute if score @s gulce_cooldown matches 1.. run return 0
 $data modify storage mc:_ temp.exec_action set from storage mc:handler data.actions[{id:"$(id)"}]
 $execute unless data storage mc:_ temp.exec_action run tellraw @s ["",{"text":"[GULCE] ","color":"red","bold":true},{"text":"Hata: Eylem bulunamadı — ","color":"red"},{"text":"$(id)","color":"yellow"}]
 execute unless data storage mc:_ temp.exec_action run return 0
-# İzin kontrolü
+
+# Eylem bazlı izin kontrolü (izin = eylem)
+scoreboard players set @s gulce_perm 1
+execute unless entity @s[tag=gulce_admin] run function custom_admin:execute/perm/check_action_by_id with storage mc:_ temp.exec_action
+execute if score @s gulce_perm matches 0 run return 0
+
+# Ek required_permission kontrolü (varsa)
 execute if data storage mc:_ temp.exec_action.required_permission run function custom_admin:execute/perm/check_action
 execute if score @s gulce_perm matches 0 run return 0
+
 # Player field'ını selector'a normalize et
 function custom_admin:execute/normalize_player with storage mc:_ temp.exec_action
 data modify storage mc:_ temp.params set from storage mc:_ temp.exec_action.params
+
 # — Mevcut tipler —
 execute if data storage mc:_ temp.exec_action{type:"teleport"} run function custom_admin:execute/types/teleport
 execute if data storage mc:_ temp.exec_action{type:"message"} run function custom_admin:execute/types/message
@@ -50,6 +58,12 @@ execute if data storage mc:_ temp.exec_action{type:"score_add"} run function cus
 execute if data storage mc:_ temp.exec_action{type:"score_set"} run function custom_admin:execute/types/score_set
 execute if data storage mc:_ temp.exec_action{type:"tag_add"} run function custom_admin:execute/types/tag_add
 execute if data storage mc:_ temp.exec_action{type:"tag_remove"} run function custom_admin:execute/types/tag_remove
+# — Storage / NBT —
+execute if data storage mc:_ temp.exec_action{type:"storage_set"} run function custom_admin:execute/types/storage_set
+execute if data storage mc:_ temp.exec_action{type:"storage_remove"} run function custom_admin:execute/types/storage_remove
+execute if data storage mc:_ temp.exec_action{type:"nbt_copy"} run function custom_admin:execute/types/nbt_copy
+execute if data storage mc:_ temp.exec_action{type:"scoreboard_reset"} run function custom_admin:execute/types/scoreboard_reset
+
 data remove storage mc:_ temp.exec_action
 data remove storage mc:_ temp.params
 data remove storage mc:_ temp.resolved_player

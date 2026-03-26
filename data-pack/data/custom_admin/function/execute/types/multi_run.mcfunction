@@ -39,5 +39,11 @@ execute if data storage mc:_ temp.exec_action{type:"score_add"} run function cus
 execute if data storage mc:_ temp.exec_action{type:"score_set"} run function custom_admin:execute/types/score_set
 execute if data storage mc:_ temp.exec_action{type:"tag_add"} run function custom_admin:execute/types/tag_add
 execute if data storage mc:_ temp.exec_action{type:"tag_remove"} run function custom_admin:execute/types/tag_remove
+# — Storage / NBT —
+execute if data storage mc:_ temp.exec_action{type:"storage_set"} run function custom_admin:execute/types/storage_set
+execute if data storage mc:_ temp.exec_action{type:"storage_remove"} run function custom_admin:execute/types/storage_remove
+execute if data storage mc:_ temp.exec_action{type:"nbt_copy"} run function custom_admin:execute/types/nbt_copy
+execute if data storage mc:_ temp.exec_action{type:"scoreboard_reset"} run function custom_admin:execute/types/scoreboard_reset
 data remove storage mc:_ multi.queue[0]
+execute if score @s gulce_perm matches 0 run return 0
 execute if data storage mc:_ multi.queue[0] run function custom_admin:execute/types/multi_run

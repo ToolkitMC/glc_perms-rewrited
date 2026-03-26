@@ -1,4 +1,4 @@
-# Gulce's Permissions (1.21.4) v1.2.0
+# Gulce's Permissions (1.21.4) v1.0.0
 
 **Pack Format:** 61 (Minecraft 1.21.4)  
 **Desteklenen Formatlar:** 48–61

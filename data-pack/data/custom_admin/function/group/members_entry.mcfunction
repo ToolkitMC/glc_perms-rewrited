@@ -1,1 +1,1 @@
-$tellraw @s ["",{"text":"    - ","color":"dark_gray"},{"text":"$(player)","color":"aqua"}]
+$tellraw @s ["",{"text":"    ● ","color":"aqua"},{"text":"$(player)","color":"aqua"},{"text":"  ","color":"dark_gray"},{"text":"[- Çıkar]","color":"red","clickEvent":{"action":"suggest_command","value":"/function custom_admin:group/remove_player {group:\"GRUP_ID\",player:\"$(player)\"}"},"hoverEvent":{"action":"show_text","value":{"text":"Grup ID'sini doldurup çalıştır"}}}]

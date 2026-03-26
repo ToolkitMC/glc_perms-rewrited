@@ -14,7 +14,7 @@ scoreboard objectives add gulce_id dummy "GULCE ID"
 execute unless data storage mc:handler data.actions run data modify storage mc:handler data.actions set value []
 execute unless data storage mc:handler data.permissions run data modify storage mc:handler data.permissions set value []
 execute unless data storage mc:handler data.groups run data modify storage mc:handler data.groups set value []
-execute unless data storage mc:handler data.meta run data modify storage mc:handler data.meta set value [{version:"V1.0.2",pack:"Gulce's Permissions (1.21.4)"}]
+execute unless data storage mc:handler data.meta run data modify storage mc:handler data.meta set value [{version:"v1.0.0",pack:"Gulce's Permissions (1.21.4)"}]
 data modify storage mc:_ temp set value {}
 
 # Yüklü olarak işaretle
@@ -27,5 +27,8 @@ scoreboard players enable @a gulce_trigger
 execute as @a[tag=gulce_admin] run function custom_admin:give/admin_head
 
 # Yükleme mesajı
-tellraw @a ["",{"text":"[GULCE] ","color":"gold","bold":true},{"text":"Admin Power v1.0.2 yüklendi!","color":"green"}]
+tellraw @a ["",{"text":"[GULCE] ","color":"gold","bold":true},{"text":"Admin Power v1.0.0 yüklendi!","color":"green"}]
 execute as @a[tag=gulce_admin] run tellraw @s ["",{"text":"[GULCE] ","color":"gold","bold":true},{"text":"Menü: ","color":"gray"},{"text":"/trigger gulce_trigger set 1","color":"yellow"}]
+
+# Mevcut eylemler için izin objelerini yeniden oluştur
+execute if data storage mc:handler data.actions[0] run function custom_admin:handler/load/restore_perms

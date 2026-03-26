@@ -1,1 +1,1 @@
-$tellraw @s ["",{"text":"    - ","color":"dark_gray"},{"text":"$(permission)","color":"green"}]
+$tellraw @s ["",{"text":"    ✓ ","color":"green"},{"text":"$(permission)","color":"green"},{"text":"  ","color":"dark_gray"},{"text":"[- Kaldır]","color":"red","clickEvent":{"action":"suggest_command","value":"/function custom_admin:group/remove_permission {group:\"GRUP_ID\",permission:\"$(permission)\"}"},"hoverEvent":{"action":"show_text","value":{"text":"Grup ID'sini doldurup çalıştır"}}}]

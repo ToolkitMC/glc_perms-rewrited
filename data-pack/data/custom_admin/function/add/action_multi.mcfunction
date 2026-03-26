@@ -3,3 +3,4 @@
 # steps icerisindeki her adim kendi player'ini veya multi'nin player'ini kullanir.
 $data modify storage mc:handler data.actions append value {id:"$(id)",type:"multi",player:"$(player)",steps:$(steps)}
 $tellraw @s ["",{"text":"[GULCE] ","color":"gold","bold":true},{"text":"Coklu eylem eklendi: ","color":"green"},{"text":"$(id)","color":"yellow"}]
+$function custom_admin:add/register_perm {id:"$(id)"}
