@@ -4,7 +4,7 @@
 
 | Sürüm | Destek Durumu |
 |-------|---------------|
-| v1.0.3 | ✅ Aktif destek |
+| v1.0.0 | ✅ Aktif destek |
 
 ## Güvenlik Açığı Bildirimi
 
