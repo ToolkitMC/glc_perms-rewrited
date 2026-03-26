@@ -27,5 +27,5 @@ scoreboard players enable @a gulce_trigger
 execute as @a[tag=gulce_admin] run function custom_admin:give/admin_head
 
 # Yükleme mesajı
-tellraw @a ["",{"text":"[GULCE] ","color":"gold","bold":true},{"text":"Admin Power v1.2.3 yüklendi!","color":"green"}]
+tellraw @a ["",{"text":"[GULCE] ","color":"gold","bold":true},{"text":"Admin Power v1.0.0 yüklendi!","color":"green"}]
 execute as @a[tag=gulce_admin] run tellraw @s ["",{"text":"[GULCE] ","color":"gold","bold":true},{"text":"Menü: ","color":"gray"},{"text":"/trigger gulce_trigger set 1","color":"yellow"}]

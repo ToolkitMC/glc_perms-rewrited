@@ -1,4 +1,4 @@
-# GULCE Admin Power v1.2.0
+# GULCE Admin Power v1.0.0
 
 **Pack Format:** 61 (Minecraft 1.21.4)  
 **Desteklenen Formatlar:** 48–61

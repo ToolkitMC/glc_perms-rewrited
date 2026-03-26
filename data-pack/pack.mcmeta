@@ -2,6 +2,6 @@
   "pack": {
     "pack_format": 61,
     "supported_formats": {"min_inclusive": 48, "max_inclusive": 61},
-    "description": "§b§lGULCE Admin Power §r§7v1.2.2\n§eİzin, Grup ve Eylem Yönetim Sistemi"
+    "description": "§b§lGULCE Admin Power §r§7v1.0.0\n§eİzin, Grup ve Eylem Yönetim Sistemi"
   }
 }
