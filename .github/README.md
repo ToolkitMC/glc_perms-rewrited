@@ -2,14 +2,9 @@
 Minecraft Java Edition 1.21.4 admin datapack — plugin gibi çalışır.
 
 ## Özellikler
-- İzin yönetimi
-- 9+ eylem tipi
-- Grup sistemi
-- 1.21.4 uyumlu
-- Tellraw menü sistemi
-
-## Kurulum
-ZIP'i `saves/<dünya>/datapacks/` klasörüne at, `/reload` yap.
-
-## Kullanım
-/trigger gulce_trigger set 1
+- [x] İzin yönetimi
+- [x] 9+ eylem tipi
+- [x] Grup sistemi
+- [x] 1.21.4 uyumlu
+- [x] Tellraw menü sistemi
+- [x] Grup sistemi
