@@ -7,6 +7,7 @@ scoreboard objectives add gulce_cooldown dummy "GULCE Bekleme"
 scoreboard objectives add gulce_timer dummy "GULCE Zamanlayıcı"
 scoreboard objectives add gulce_group dummy "GULCE Grup Seviyesi"
 scoreboard objectives add gulce_perm dummy "GULCE Izin Kontrol"
+scoreboard objectives add gulce_rc minecraft.used:minecraft.carrot_on_a_stick "GULCE RIGHT CLICK"
 
 # Ana depolama — mevcut data varsa koru, yoksa sıfırdan oluştur
 execute unless data storage mc:handler data.actions run data modify storage mc:handler data.actions set value []
