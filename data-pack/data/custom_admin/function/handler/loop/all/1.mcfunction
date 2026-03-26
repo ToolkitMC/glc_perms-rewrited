@@ -1,4 +1,4 @@
-# GULCE Admin Power - Tik Döngüsü (1.21.4)
+# Gulce's Permissions (1.21.4) - Tik Döngüsü (1.21.4)
 execute unless entity @a run return 0
 execute unless data storage mc:handler data{loaded:1b} run return 0
 

@@ -1,4 +1,4 @@
-# GLC PERMISSIONS (RE-WRITED)
+# GULCE'S PERMISSIONS (1.21.4)
 Minecraft Java Edition 1.21.4 admin datapack — plugin gibi çalışır.
 
 ## Özellikler

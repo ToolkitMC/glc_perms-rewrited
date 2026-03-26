@@ -1,5 +1,5 @@
 tellraw @s ["",{"text":"====================","color":"green","bold":true}]
-tellraw @s ["",{"text":" GULCE Admin Power","color":"green","bold":true}]
+tellraw @s ["",{"text":" Gulce's Permissions (1.21.4)","color":"green","bold":true}]
 tellraw @s ["",{"text":"====================","color":"green","bold":true}]
 tellraw @s ["",{"text":"Versiyon: ","color":"gray"},{"text":"v1.2.0","color":"yellow"}]
 tellraw @s ["",{"text":"Paket Formatı: ","color":"gray"},{"text":"61 (1.21.4)","color":"yellow"}]

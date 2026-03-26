@@ -1,4 +1,4 @@
-# GULCE Admin Power - Yükleme İşleyicisi (1.21.4)
+# Gulce's Permissions (1.21.4) - Yükleme İşleyicisi (1.21.4)
 execute if data storage mc:handler data{loaded:1b} run return 1
 
 # Puan tahtaları (idempotent - zaten varsa hata vermez)
@@ -14,7 +14,7 @@ scoreboard objectives add gulce_id dummy "GULCE ID"
 execute unless data storage mc:handler data.actions run data modify storage mc:handler data.actions set value []
 execute unless data storage mc:handler data.permissions run data modify storage mc:handler data.permissions set value []
 execute unless data storage mc:handler data.groups run data modify storage mc:handler data.groups set value []
-execute unless data storage mc:handler data.meta run data modify storage mc:handler data.meta set value [{version:"V1.0.2",pack:"GULCE Admin Power"}]
+execute unless data storage mc:handler data.meta run data modify storage mc:handler data.meta set value [{version:"V1.0.2",pack:"Gulce's Permissions (1.21.4)"}]
 data modify storage mc:_ temp set value {}
 
 # Yüklü olarak işaretle

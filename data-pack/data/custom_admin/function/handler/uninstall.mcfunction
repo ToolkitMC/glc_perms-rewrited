@@ -1,4 +1,4 @@
-# GULCE Admin Power - Kaldırma İşleyicisi
+# Gulce's Permissions (1.21.4) - Kaldırma İşleyicisi
 # Çağrı: /function custom_admin:handler/uninstall
 
 execute unless data storage mc:handler data{loaded:1b} run tellraw @s ["",{"text":"[GULCE] ","color":"red","bold":true},{"text":"Zaten kurulu değil.","color":"red"}]

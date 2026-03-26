@@ -1,4 +1,4 @@
-# GULCE Admin Power v1.2.0
+# Gulce's Permissions (1.21.4) v1.2.0
 
 **Pack Format:** 61 (Minecraft 1.21.4)  
 **Desteklenen Formatlar:** 48–61
@@ -147,7 +147,7 @@ Tüm eylemler storage'da saklanır ve `/function custom_admin:execute/action {id
 ```
 mc:handler data {
   loaded: 1b,
-  meta: [{version:"1.2.0", pack:"GULCE Admin Power"}],
+  meta: [{version:"1.2.0", pack:"Gulce's Permissions (1.21.4)"}],
   permissions: [{id, player, permission, level}],
   groups: [{id, name, level, members:[], permissions:[]}],
   actions: [{id, type, params:{...}, player}]
