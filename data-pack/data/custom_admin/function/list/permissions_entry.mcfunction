@@ -1,0 +1,1 @@
+$tellraw @s ["",{"text":" - ","color":"dark_gray"},{"text":"$(id)","color":"yellow"},{"text":" | ","color":"dark_gray"},{"text":"$(permission)","color":"green"},{"text":" Sv.","color":"dark_gray"},{"text":"$(level)","color":"gold"}]
