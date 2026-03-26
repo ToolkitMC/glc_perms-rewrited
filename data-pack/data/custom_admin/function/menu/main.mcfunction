@@ -1,5 +1,5 @@
 tellraw @s ["",{"text":"========================","color":"aqua","bold":true}]
-tellraw @s ["",{"text":" GULCE ","color":"aqua","bold":true},{"text":"Admin Power","color":"green","bold":true},{"text":" v1.0.2","color":"yellow"}]
+tellraw @s ["",{"text":" GULCE ","color":"aqua","bold":true},{"text":"Admin Power","color":"green","bold":true},{"text":" v1.2.0","color":"yellow"}]
 tellraw @s ["",{"text":"========================","color":"aqua","bold":true}]
 tellraw @s ["",{"text":" "},{"text":"[İzin Yönetimi]","color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"/trigger gulce_trigger set 2"},"hoverEvent":{"action":"show_text","contents":{"text":"İzin yönetim menüsü"}}}]
 tellraw @s ["",{"text":" "},{"text":"[Grup Yönetimi]","color":"light_purple","bold":true,"clickEvent":{"action":"run_command","value":"/trigger gulce_trigger set 5"},"hoverEvent":{"action":"show_text","contents":{"text":"Grup yönetim menüsü"}}}]
