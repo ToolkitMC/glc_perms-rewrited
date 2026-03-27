@@ -1,26 +1,11 @@
-# Eylem Çalıştır (MAKRO) — {id:"eylem_id"}
-
-# CD kontrolü
-execute if score @s gulce_cooldown matches 1.. run tellraw @s ["",{"text":"[GULCE] ","color":"red","bold":true},{"text":"Lütfen bekleyin! Kalan süre: ","color":"red"},{"score":{"name":"@s","objective":"gulce_cooldown"},"color":"yellow"},{"text":" tik","color":"red"}]
-execute if score @s gulce_cooldown matches 1.. run scoreboard players set @s gulce_trigger 0
-execute if score @s gulce_cooldown matches 1.. run return 0
-
+# Eylem Çalıştır — Yürüten @s olarak (MAKRO) — {id:"eylem_id"}
+# execute/action.mcfunction'dan farkı: player field @s olarak override edilir.
 $data modify storage mc:_ temp.exec_action set from storage mc:handler data.actions[{id:"$(id)"}]
-$execute unless data storage mc:_ temp.exec_action run tellraw @s ["",{"text":"[GULCE] ","color":"red","bold":true},{"text":"Hata: Eylem bulunamadı — ","color":"red"},{"text":"$(id)","color":"yellow"}]
 execute unless data storage mc:_ temp.exec_action run return 0
-
-# Eylem bazlı izin kontrolü (izin = eylem)
-scoreboard players set @s gulce_perm 1
-execute unless entity @s[tag=gulce_admin] run function custom_admin:execute/perm/check_action_by_id with storage mc:_ temp.exec_action
-execute if score @s gulce_perm matches 0 run return 0
-
-# Ek required_permission kontrolü (varsa)
-execute if data storage mc:_ temp.exec_action.required_permission run function custom_admin:execute/perm/check_action
-execute if score @s gulce_perm matches 0 run return 0
-
-# Player field'ını selector'a normalize et
-function custom_admin:execute/normalize_player with storage mc:_ temp.exec_action
+data modify storage mc:_ temp.exec_action.player set value "@s"
+data modify storage mc:_ temp.resolved_player set value "@s"
 data modify storage mc:_ temp.params set from storage mc:_ temp.exec_action.params
+
 
 # — Mevcut tipler —
 execute if data storage mc:_ temp.exec_action{type:"teleport"} run function custom_admin:execute/types/teleport
@@ -83,12 +68,3 @@ execute if data storage mc:_ temp.exec_action{type:"op_log"} run function custom
 data remove storage mc:_ temp.exec_action
 data remove storage mc:_ temp.params
 data remove storage mc:_ temp.resolved_player
-
-# CD ayarla
-scoreboard players set @s gulce_cooldown 40
-
-# Başarı mesajı
-$tellraw @s ["",{"text":"[GULCE] ","color":"gold","bold":true},{"text":"✅ Eylem çalıştırıldı: ","color":"green"},{"text":"$(id)","color":"yellow"}]
-
-# Log
-$tellraw @a[tag=gulce_admin] ["",{"text":"[GULCE] ","color":"gold","bold":true},{"text":"Eylem yürütüldü: ","color":"gray"},{"text":"$(id)","color":"yellow"},{"text":" tarafından ","color":"gray"},{"selector":"@s","color":"aqua"}]

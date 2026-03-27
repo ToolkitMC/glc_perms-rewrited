@@ -1,5 +1,5 @@
-# Multi Drain (legacy — multi.mcfunction üzerinden çalışır)
-# act/run ile birebir aynı dispatch, sadece devam satırı farklı.
+# Multi Drain — kuyruktan bir adım al, çalıştır, sil, devam et
+# Silme işlemi type dispatch'ten ÖNCE yapılıyor — sonsuz döngü riski yok.
 data modify storage mc:_ multi.step set from storage mc:_ multi.queue[0]
 data remove storage mc:_ multi.queue[0]
 execute unless data storage mc:_ multi.step.player run data modify storage mc:_ multi.step.player set from storage mc:_ multi.player
@@ -63,4 +63,4 @@ execute if data storage mc:_ temp.exec_action{type:"cmd",params:{cmd:"broadcast_
 # — FUNC (params.func ile seçilen gelişmiş fonksiyonlar) —
 execute if data storage mc:_ temp.exec_action{type:"func",params:{func:"warn_message"}} run function custom_admin:execute/types/multi/func/warn_message
 # — Devam —
-execute if data storage mc:_ multi.queue[0] run function custom_admin:execute/types/multi_run
+execute if data storage mc:_ multi.queue[0] run function custom_admin:execute/types/multi/act/run

@@ -1,6 +1,6 @@
 tellraw @s ["",{"text":"╔══════════════════════╗","color":"dark_aqua","bold":true}]
 tellraw @s ["",{"text":"║  ","color":"dark_aqua","bold":true},{"text":"⚙ GULCE Admin Power","color":"aqua","bold":true},{"text":"  ║","color":"dark_aqua","bold":true}]
-tellraw @s ["",{"text":"║  ","color":"dark_aqua"},{"text":"v1.0.0","color":"yellow"},{"text":"   (1.21.4)","color":"dark_gray"},{"text":"         ║","color":"dark_aqua"}]
+tellraw @s ["",{"text":"║  ","color":"dark_aqua"},{"text":"v1.2.1","color":"yellow"},{"text":"   (1.21.4)","color":"dark_gray"},{"text":"         ║","color":"dark_aqua"}]
 tellraw @s ["",{"text":"╠══════════════════════╣","color":"dark_aqua","bold":true}]
 tellraw @s ["",{"text":"║ ","color":"dark_aqua"},{"text":"[🔑 İzin Yönetimi]","color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"/trigger gulce_trigger set 2"},"hoverEvent":{"action":"show_text","value":{"text":"İzin tanımları, seviyeler"}}}]
 tellraw @s ["",{"text":"║ ","color":"dark_aqua"},{"text":"[👥 Grup Yönetimi]","color":"light_purple","bold":true,"clickEvent":{"action":"run_command","value":"/trigger gulce_trigger set 5"},"hoverEvent":{"action":"show_text","value":{"text":"Gruplar, üyeler, izinler"}}}]
